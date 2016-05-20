@@ -1,0 +1,404 @@
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Halant:300,400|Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+	<title>T R A C K</title>
+</head>
+
+<style type="text/css" media="all">
+
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	li a {
+		display: block;
+		padding: 0.1vw 0 0.2vw 13%;
+		text-decoration: none;
+		text-align: left;
+		font-weight: 300;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.5vw;
+		color: #dddddd;
+	}
+	li a:hover {
+		display: block;
+		color: #ffffff;
+		padding: 0.1vw 0 0.2vw 13%;
+		text-decoration: none;
+		text-align: left;
+		font-weight: 300;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.5vw;
+		color: #dddddd;
+		background-color: #bc2c2c;
+	}
+	#body {
+		width: 100%;
+		height: 100%;
+		background-color: #1d1d1d;
+	}
+	#container {
+		position: relative;
+		overflow: visible;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		-webkit-align-items: flex-start;
+		align-items: flex-start;
+	}
+	#container .div {
+		-webkit-transition: all .1s;
+		-moz-transition: all .1s;
+		transition: all .1s;
+	}
+	#side {
+		overflow: scroll;
+		height: 73%;
+		cursor: default;
+		flex: 3;
+		-webkit-flex: 3;
+		background-color: #1d1d1d;
+	}
+	#logo {
+		visibility: visible;
+		position: absolute;
+		text-align: center;
+		width: 27.27%;
+		cursor: default;
+		padding: 5vh 0 13vh 0;
+		bottom: 0;
+		background-color: #1d1d1d;
+	}
+	#main {
+		width: 100%;
+		height: 100%;
+		cursor: default;
+		flex: 8;
+		-webkit-flex: 8;
+		background-color: #cccccc;
+		display: flex;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-webkit-align-items: stretch;
+		align-items: stretch;
+		flex-direction: column;
+	}
+	.title { padding-top: 5vh;
+		padding-bottom: 5vh;
+		letter-spacing: 4px;
+		text-align: center;
+		font-weight: 400;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.4vw;
+		color: #bc2c2c;
+		flex: 0;
+		-webkit-flex: 0;
+
+	}
+	.date {
+		text-align: left;
+		width: 80%;
+		padding-left: 13%;
+		padding-top: 2vh;
+		padding-bottom: 0.4vw;
+		font-weight: 300;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.5vw;
+		color: #ffffff;
+	}
+	.details {
+		position: relative;
+		width: 80%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 5vh;
+		overflow: visible;
+		display: flex;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		-webkit-align-items: center;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		flex: 1;
+		-webkit-flex: 1;
+	}
+	.details a:hover {
+		line-height: 1.1;
+		letter-spacing: 2px;
+		text-align: center;
+		font-weight: 300;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.2vw;
+		color: #6d6d6d;
+	}
+	.plyrcount {
+		cursor: default;
+		line-height: 1.1;
+		letter-spacing: 2px;
+		text-align: center;
+		font-weight: 300;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.2vw;
+		color: #6d6d6d;
+		flex: 1;
+		-webkit-flex: 1;
+	}
+	.zeus {
+		cursor: default;
+		line-height: 1.1;
+		letter-spacing: 2px;
+		text-align: center;
+		font-weight: 300;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.2vw;
+		color: #6d6d6d;
+		flex: 1;
+		-webkit-flex: 1;
+	}
+	.srvcfg {
+		cursor: default;
+		line-height: 1.1;
+		letter-spacing: 2px;
+		text-align: center;
+		font-weight: 300;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.2vw;
+		color: #6d6d6d;
+		flex: 1;
+		-webkit-flex: 1;
+	}
+	.roster {
+		position: relative;
+		width: 80%;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-bottom: 10%;
+		display: flex;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		-webkit-align-items: stretch;
+		align-items: stretch;
+		flex-direction: column;
+		flex: 3;
+		-webkit-flex: 3;
+	}
+	.roster a:hover {
+		letter-spacing: 2px;
+		text-align: center;
+		font-weight: 400;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.5vw;
+		color: #bc2c2c;
+	}
+	.rk {
+		text-align: right;
+		position: absolute;
+		right: 90%;
+		line-height: 3.5vh;
+		letter-spacing: 2px;
+		text-align: center;
+		font-weight: 300;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.2vw;
+		color: #6d6d6d;
+		flex: 1;
+		-webkit-flex: 1;
+	}
+	.plt {
+		letter-spacing: 2px;
+		text-align: center;
+		font-weight: 400;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.5vw;
+		color: #1d1d1d;
+		flex: 1;
+		-webkit-flex: 1;
+	}
+	.sqds {
+		overflow: hidden;
+		letter-spacing: 2px;
+		text-align: center;
+		font-weight: 400;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.5vw;
+		color: #1d1d1d;
+		flex: 4;
+		-webkit-flex: 4;
+		display: flex;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		-webkit-align-items: stretch;
+		align-items: stretch;
+		flex-direction: row;
+		text-align: left;
+	}
+	.sqd {
+		flex: 1;
+		-webkit-flex: 1;
+		display: flex;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		-webkit-align-items: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.sl {
+		flex: 1;
+		-webkit-flex: 1;
+	}
+	.fts {
+		flex: 4;
+		-webkit-flex: 4;
+		display: flex;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		-webkit-align-items: flex-start;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+	.ft {
+		flex: 0;
+		-webkit-flex: 0;
+	}
+
+</style>
+
+
+
+<body id="body">
+
+	<div id="container">
+		<div id="side">
+			<div class="title">SITUATION</div>
+			<div class="date">-- April Week 1</div>
+			<ul>
+				<li><a href="default.asp">compound_madness_k</a></li>
+				<li><a href="news.asp">foggy_convoy_fbi</a></li>
+				<li><a href="contact.asp">save_putin_mo</a></li>
+			</ul>
+			<div class="date">-- April Week 2</div>
+			<ul>
+				<li><a href="default.asp">compound_mad</a></li>
+				<li><a href="news.asp">foggy_convoyi</a></li>
+				<li><a href="contact.asp">save_putin_mo</a></li>
+			</ul>
+			<div class="date">-- April Week 3</div>
+			<ul>
+				<li><a href="default.asp">compo_madness_</a></li>
+				<li><a href="news.asp">foggy_convoy_fbi</a></li>
+				<li><a href="contact.asp">savetin_mo</a></li>
+			</ul>
+			<div class="date">-- April Week 4</div>
+			<ul>
+				<li><a href="default.asp">compounfffggsd_madness_k</a></li>
+				<li><a href="news.asp">foggy_cony_fbi</a></li>
+				<li><a href="contact.asp">save_tin_mo</a></li>
+			</ul>
+			<div id="logo">
+				<img src="images/track.png" height="4%"/>
+			</div>
+		</div>
+		<div id="main">
+			<div class="title">OVERVIEW</div>
+			<div class="details">
+				<div class="plyrcount">PLAYERS<p style="font-size: 4vw; color: #1d1d1d">37</p></div>
+				<div class="zeus">ZEUS<p style="font-size: 4vw; color: #1d1d1d">kingsley</p></div>
+				<div class="srvcfg">
+					view<br/>
+					<a>server.cfg</a><br/>
+					<a>players list</a>
+				</div>
+			</div>
+			<div class="title">HIERARCHY</div>
+			<div class="roster">
+				<div class="rk">
+						PLT
+				</div>
+				<a class="plt">
+						fbi
+				</a>
+				<div class="sqds">
+					<div class="rk">
+						SQ
+					</div>
+					<div class="sqd">
+						<a class="sl">
+							krijger
+						</a>
+						<div class="fts">
+							<div class="rk">
+								1<br>2<br>3
+							</div>
+							<a class="ft">
+								hawkwing
+							</a>
+							<a class="ft">
+								Shogun
+							</a>
+						</div>
+					</div>
+					<div class="sqd">
+						<a class="sl">
+							morbus
+						</a>
+						<div class="fts">
+							<a class="ft">
+								hawkwing
+							</a>
+							<a class="ft">
+								Verne
+							</a>
+						</div>
+					</div>
+					<div class="sqd">
+						<a class="sl">
+							combat kek
+						</a>
+						<div class="fts">
+							<a class="ft">
+								hawkwing
+							</a>
+							<a class="ft">
+								Verne
+							</a>
+							<a class="ft">
+								Golbs
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+
+
+</html>
